@@ -3,17 +3,23 @@
 import { useEffect, useState } from "react";
 
 export default function Navbar() {
-  const [darkMode, setDarkMode] = useState(false);
+  const getInitialTheme = () => {
+    if(typeof window === "undefined") {
+      return false;
+    }
+
+    return localStorage.getItem("theme") === "dark";
+  };
+  const [darkMode, setDarkMode] = useState(getInitialTheme);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
-    const savedTheme = localStorage.getItem("theme");
-
-    if (savedTheme === "dark") {
+    if (darkMode) {
       document.documentElement.classList.add("dark");
-      setDarkMode(true);
+    } else {
+      document.documentElement.classList.remove("dark");
     }
-  }, []);
+  }, [darkMode]);
 
   const toggleDarkMode = () => {
     const newDarkMode = !darkMode;
@@ -30,7 +36,7 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="border-b border-[#f0dce4] bg-[var(--background)] transition-colors dark:border-[#4a303b]">
+    <nav className="relative border-b border-[#f0dce4] bg-[var(--background)] transition-colors dark:border-[#4a303b]">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
         {/* Logo */}
         <span className="text-xl font-bold text-[var(--pink)]">Unii</span>
@@ -111,7 +117,6 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Mobile Dropdown */}
       {/* Mobile Dropdown */}
       <div
         className={`absolute left-0 top-full z-50 w-full border-t border-[#f0dce4] bg-[var(--background)] shadow-lg transition-all duration-300 ease-out dark:border-[#4a303b] ${
