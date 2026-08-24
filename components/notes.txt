@@ -1,0 +1,3 @@
+tambahkan animasi gulir utk navbar 
+hydration fix
+dropdownnya bikin otomatis keclose pada saat layar dibesarin
