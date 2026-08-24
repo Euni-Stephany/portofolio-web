@@ -3,35 +3,28 @@
 import { useEffect, useState } from "react";
 
 export default function Navbar() {
-  const getInitialTheme = () => {
-    if(typeof window === "undefined") {
-      return false;
-    }
-
-    return localStorage.getItem("theme") === "dark";
-  };
-  const [darkMode, setDarkMode] = useState(getInitialTheme);
+  const [darkMode, setDarkMode] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
-    if (darkMode) {
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme === "dark") {
       document.documentElement.classList.add("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
+      setDarkMode(true);
     }
-  }, [darkMode]);
+  }, []);
 
   const toggleDarkMode = () => {
-    const newDarkMode = !darkMode;
+    const isDark = document.documentElement.classList.contains("dark");
 
-    setDarkMode(newDarkMode);
-
-    if (newDarkMode) {
-      document.documentElement.classList.add("dark");
-      localStorage.setItem("theme", "dark");
-    } else {
+    if (isDark) {
       document.documentElement.classList.remove("dark");
       localStorage.setItem("theme", "light");
+      setDarkMode(false);
+    } else {
+      document.documentElement.classList.add("dark");
+      localStorage.setItem("theme", "dark");
+      setDarkMode(true);
     }
   };
 
@@ -85,7 +78,10 @@ export default function Navbar() {
             aria-label="Toggle dark mode"
             className="rounded-full bg-[var(--pink-light)] px-3 py-2 transition-transform hover:scale-105"
           >
-            {darkMode ? "☀️" : "🌙"}
+            <>
+              <span className="dark:hidden">🌙</span>
+              <span className="hidden dark:inline">☀️</span>
+            </>
           </button>
         </div>
 
@@ -98,7 +94,10 @@ export default function Navbar() {
             aria-label="Toggle dark mode"
             className="rounded-full bg-[var(--pink-light)] px-3 py-2"
           >
-            {darkMode ? "☀️" : "🌙"}
+            <>
+              <span className="dark:hidden">🌙</span>
+              <span className="hidden dark:inline">☀️</span>
+            </>
           </button>
 
           {/* Hamburger */}
