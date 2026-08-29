@@ -37,13 +37,6 @@ export default function Navbar() {
         {/* Desktop Navigation */}
         <div className="hidden items-center gap-8 md:flex">
           <a
-            href="#about"
-            className="transition-colors hover:text-[var(--pink)]"
-          >
-            About
-          </a>
-
-          <a
             href="#skills"
             className="transition-colors hover:text-[var(--pink)]"
           >
@@ -79,8 +72,7 @@ export default function Navbar() {
             className="rounded-full bg-[var(--pink-light)] px-3 py-2 transition-transform hover:scale-105"
           >
             <>
-              <span className="dark:hidden">🌙</span>
-              <span className="hidden dark:inline">☀️</span>
+              {darkMode ? "☀️" : "🌙"}
             </>
           </button>
         </div>
@@ -95,8 +87,7 @@ export default function Navbar() {
             className="rounded-full bg-[var(--pink-light)] px-3 py-2"
           >
             <>
-              <span className="dark:hidden">🌙</span>
-              <span className="hidden dark:inline">☀️</span>
+              {darkMode ? "☀️" : "🌙"}
             </>
           </button>
 
@@ -104,7 +95,6 @@ export default function Navbar() {
           <button
             type="button"
             onClick={() => {
-              console.log("HAMBURGER DIKLIK");
               setIsMenuOpen((prev) => !prev);
             }}
             aria-label={isMenuOpen ? "Close menu" : "Open menu"}
@@ -125,14 +115,6 @@ export default function Navbar() {
         }`}
       >
         <div className="mx-auto flex max-w-6xl flex-col gap-4 px-6 py-5">
-          <a
-            href="#about"
-            onClick={() => setIsMenuOpen(false)}
-            className="py-2 transition-colors hover:text-(--pink)"
-          >
-            About
-          </a>
-
           <a
             href="#skills"
             onClick={() => setIsMenuOpen(false)}

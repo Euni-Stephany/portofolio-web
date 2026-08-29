@@ -8,7 +8,6 @@ export default function Hero() {
 
   return (
     <section className="relative isolate overflow-hidden bg-[var(--background)] px-6 py-20 transition-colors sm:py-24 md:py-32">
-      
       {/* Decorative Background */}
       <div
         className="pointer-events-none absolute -left-24 -top-24 -z-10 h-72 w-72 rounded-full bg-[#f8dce8] opacity-60 blur-3xl dark:bg-[#4a303b]"
@@ -21,10 +20,8 @@ export default function Hero() {
       />
 
       <div className="mx-auto flex max-w-6xl flex-col-reverse items-center gap-14 md:flex-row md:justify-between md:gap-20">
-
         {/* Hero Content */}
         <div className="max-w-2xl text-center md:text-left">
-
           {/* Small Introduction */}
           <div className="mb-4 flex items-center justify-center gap-2 md:justify-start">
             <span className="text-xl text-[var(--pink)]">✦</span>
@@ -45,16 +42,20 @@ export default function Hero() {
             <br className="sm:hidden" /> & Data Enthusiast
           </h2>
 
+          <p className="mx-auto mt-6 max-w-xl text-base leading-7 text-[var(--muted)] sm:text-lg md:mx-0">
+            building with code, learning through data.
+          </p>
+
           {/* Description */}
           <p className="mx-auto mt-6 max-w-xl text-base leading-7 text-[var(--muted)] sm:text-lg md:mx-0">
-            I&apos;m an Informatics graduate interested in building
-            meaningful web applications and exploring data-driven
-            solutions using modern technologies.
+            I enjoy building web applications, working with databases, and
+            exploring machine learning to solve practical problems. My
+            experience spans frontend and backend development as well as natural
+            language processing research.
           </p>
 
           {/* Buttons */}
           <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-center md:justify-start">
-
             {/* Projects Button */}
             <a
               href="#projects"
@@ -63,72 +64,30 @@ export default function Hero() {
               View My Projects
             </a>
 
-            {/* CV Dropdown */}
-            <div className="relative">
+            <a
+              href="https://github.com/Euni-Stephany"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-full border border-[#e7b8cb] px-7 py-3.5 text-center text-sm font-semibold text-[var(--pink)] transition duration-300 hover:bg-[var(--pink-light)]"
+            >
+              GitHub
+            </a>
 
-              <button
-                onClick={() => setIsCvOpen(!isCvOpen)}
-                className="flex w-full items-center justify-center gap-2 rounded-full border border-[#e7b8cb] px-7 py-3.5 text-sm font-semibold text-[var(--pink)] transition duration-300 hover:bg-[var(--pink-light)] sm:w-auto"
-              >
-                Download CV
+            <a
+              href="https://www.linkedin.com/in/eunique-lydia-stephany-2075822b6/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-full border border-[#e7b8cb] px-7 py-3.5 text-center text-sm font-semibold text-[var(--pink)] transition duration-300 hover:bg-[var(--pink-light)]"
+            >
+              LinkedIn
+            </a>
 
-                <span className="text-xs">
-                  {isCvOpen ? "▲" : "▼"}
-                </span>
-              </button>
-
-              {isCvOpen && (
-                <div className="absolute left-1/2 top-full z-20 mt-3 w-64 -translate-x-1/2 overflow-hidden rounded-2xl border border-[#f0dce4] bg-[var(--background)] text-left shadow-xl dark:border-[#4a303b]">
-                  
-                  <a
-                    href="/cv/CV-Unii-Fullstack.pdf"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="block px-5 py-4 text-sm transition hover:bg-[var(--pink-light)]"
-                  >
-                    <span className="font-medium">
-                      Fullstack Developer
-                    </span>
-
-                    <span className="mt-1 block text-xs text-[var(--muted)]">
-                      Fullstack-focused CV
-                    </span>
-                  </a>
-
-                  <a
-                    href="/cv/CV-Unii-Web-Developer.pdf"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="block border-t border-[#f0dce4] px-5 py-4 text-sm transition hover:bg-[var(--pink-light)] dark:border-[#4a303b]"
-                  >
-                    <span className="font-medium">
-                      Web Developer
-                    </span>
-
-                    <span className="mt-1 block text-xs text-[var(--muted)]">
-                      Web development-focused CV
-                    </span>
-                  </a>
-
-                  <a
-                    href="/cv/CV-Unii-Data.pdf"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="block border-t border-[#f0dce4] px-5 py-4 text-sm transition hover:bg-[var(--pink-light)] dark:border-[#4a303b]"
-                  >
-                    <span className="font-medium">
-                      Data / ML
-                    </span>
-
-                    <span className="mt-1 block text-xs text-[var(--muted)]">
-                      Data and machine learning CV
-                    </span>
-                  </a>
-
-                </div>
-              )}
-
-            </div>
+            <a
+              href="mailto:eulydiastephany@gmail.com"
+              className="rounded-full border border-[#e7b8cb] px-7 py-3.5 text-center text-sm font-semibold text-[var(--pink)] transition duration-300 hover:bg-[var(--pink-light)]"
+            >
+              Email
+            </a>
           </div>
 
           {/* Small Tech Stack */}
@@ -147,7 +106,6 @@ export default function Hero() {
 
         {/* Profile Image */}
         <div className="relative shrink-0">
-
           {/* Decorative Circle */}
           <div className="absolute -inset-5 rounded-full border border-[#f3c6d8] opacity-70 dark:border-[#4a303b]" />
 
@@ -167,10 +125,9 @@ export default function Hero() {
               alt="Profile photo"
               fill
               className="object-cover"
-  />
-</div>
+            />
+          </div>
         </div>
-
       </div>
     </section>
   );
