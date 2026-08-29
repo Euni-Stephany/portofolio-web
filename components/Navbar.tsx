@@ -69,7 +69,7 @@ export default function Navbar() {
             type="button"
             onClick={toggleDarkMode}
             aria-label="Toggle dark mode"
-            className="rounded-full bg-[var(--pink-light)] px-3 py-2 transition-transform hover:scale-105"
+            className="rounded-full bg-[var(--pink-light)] px-3 py-2 cursor-pointer transition-transform duration-200 hover:scale-105"
           >
             <>
               {darkMode ? "☀️" : "🌙"}
@@ -84,7 +84,7 @@ export default function Navbar() {
             type="button"
             onClick={toggleDarkMode}
             aria-label="Toggle dark mode"
-            className="rounded-full bg-[var(--pink-light)] px-3 py-2"
+            className="rounded-full bg-[var(--pink-light)] px-3 py-2 cursor-pointer transition-transform duration-200 hover:scale-110"
           >
             <>
               {darkMode ? "☀️" : "🌙"}
@@ -99,7 +99,7 @@ export default function Navbar() {
             }}
             aria-label={isMenuOpen ? "Close menu" : "Open menu"}
             aria-expanded={isMenuOpen}
-            className="rounded-lg bg-pink-200 px-4 py-2 text-2xl"
+            className="rounded-lg bg-pink-200 px-4 py-2 text-2xl cursor-pointer transition hover:-translate-y-1 hover:opacity-90 sm:w-auto"
           >
             {isMenuOpen ? "✕" : "☰"}
           </button>

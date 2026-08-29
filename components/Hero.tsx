@@ -2,10 +2,9 @@
 
 import Image from "next/image";
 import { useState } from "react";
+import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 
 export default function Hero() {
-  const [isCvOpen, setIsCvOpen] = useState(false);
-
   return (
     <section className="relative isolate overflow-hidden bg-[var(--background)] px-6 py-20 transition-colors sm:py-24 md:py-32">
       {/* Decorative Background */}
@@ -42,7 +41,7 @@ export default function Hero() {
             <br className="sm:hidden" /> & Data Enthusiast
           </h2>
 
-          <p className="mx-auto mt-6 max-w-xl text-base leading-7 text-[var(--muted)] sm:text-lg md:mx-0">
+          <p className="mx-auto mt-6 max-w-xl text-base leading-7 text-[var(--muted)] sm:text-lg md:mx-0 italic">
             building with code, learning through data.
           </p>
 
@@ -63,13 +62,13 @@ export default function Hero() {
             >
               View My Projects
             </a>
-
             <a
               href="https://github.com/Euni-Stephany"
               target="_blank"
               rel="noopener noreferrer"
-              className="rounded-full border border-[#e7b8cb] px-7 py-3.5 text-center text-sm font-semibold text-[var(--pink)] transition duration-300 hover:bg-[var(--pink-light)]"
+              className="flex w-full items-center justify-center gap-2 rounded-full bg-[var(--pink)] px-7 py-3.5 text-sm font-semibold text-white transition hover:-translate-y-1 hover:opacity-90 sm:w-auto"
             >
+              <FaGithub size={18} />
               GitHub
             </a>
 
@@ -77,15 +76,17 @@ export default function Hero() {
               href="https://www.linkedin.com/in/eunique-lydia-stephany-2075822b6/"
               target="_blank"
               rel="noopener noreferrer"
-              className="rounded-full border border-[#e7b8cb] px-7 py-3.5 text-center text-sm font-semibold text-[var(--pink)] transition duration-300 hover:bg-[var(--pink-light)]"
+              className="flex w-full items-center justify-center gap-2 rounded-full bg-[var(--pink)] px-7 py-3.5 text-sm font-semibold text-white transition hover:-translate-y-1 hover:opacity-90 sm:w-auto"
             >
+              <FaLinkedin size={18} />
               LinkedIn
             </a>
 
             <a
               href="mailto:eulydiastephany@gmail.com"
-              className="rounded-full border border-[#e7b8cb] px-7 py-3.5 text-center text-sm font-semibold text-[var(--pink)] transition duration-300 hover:bg-[var(--pink-light)]"
+              className="flex w-full items-center justify-center gap-2 rounded-full bg-[var(--pink)] px-7 py-3.5 text-sm font-semibold text-white transition hover:-translate-y-1 hover:opacity-90 sm:w-auto"
             >
+              <FaEnvelope size={18} />
               Email
             </a>
           </div>
