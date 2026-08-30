@@ -32,7 +32,8 @@ export default function Hero() {
 
           {/* Name */}
           <h1 className="text-5xl font-bold tracking-tight text-[var(--foreground)] sm:text-6xl md:text-7xl">
-            Unii<span className="text-[var(--pink)]">.</span>
+            Eunique Lydia Stephany
+            <span className="text-[var(--pink)]">.</span>
           </h1>
 
           {/* Role */}
@@ -89,19 +90,6 @@ export default function Hero() {
               <FaEnvelope size={18} />
               Email
             </a>
-          </div>
-
-          {/* Small Tech Stack */}
-          <div className="mt-10 flex flex-wrap items-center justify-center gap-3 text-xs text-[var(--muted)] md:justify-start">
-            <span>React</span>
-            <span>•</span>
-            <span>Next.js</span>
-            <span>•</span>
-            <span>Node.js</span>
-            <span>•</span>
-            <span>Python</span>
-            <span>•</span>
-            <span>SQL</span>
           </div>
         </div>
 
