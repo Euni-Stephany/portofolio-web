@@ -1,7 +1,4 @@
-"use client";
-
 import Image from "next/image";
-import { useState } from "react";
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 
 export default function Hero() {
@@ -59,7 +56,7 @@ export default function Hero() {
             {/* Projects Button */}
             <a
               href="#projects"
-              className="rounded-full bg-[var(--pink)] px-7 py-3.5 text-center text-sm font-semibold text-white shadow-lg shadow-pink-200/50 transition duration-300 hover:-translate-y-1 hover:opacity-90 dark:shadow-none"
+              className="flex w-full items-center justify-center gap-2 rounded-full bg-[var(--pink)] px-7 py-3.5 text-sm font-semibold text-white transition hover:-translate-y-1 hover:opacity-90 sm:w-auto"
             >
               View My Projects
             </a>

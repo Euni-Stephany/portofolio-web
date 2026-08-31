@@ -23,6 +23,7 @@ const skillCategories = [
 
 export default function Skills() {
   return (
+    
     <section
       id="skills"
       className="bg-[var(--section-background)] px-6 py-20 sm:px-10 lg:px-20"
