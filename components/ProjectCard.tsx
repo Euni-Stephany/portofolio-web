@@ -19,10 +19,10 @@ const projects: Project[] = [
     title: "Emotion Classification",
     category: "Machine Learning",
     description:
-      "A text classification project for detecting emotions from Twitter data. The project compares several Spark ML classification models and evaluates their performance using accuracy, precision, recall, F1-score, and ROC-AUC.",
-    tags: ["Python", "PySpark", "NLP", "BERT"],
+      "A text classification project for detecting emotions from Twitter data. The project compares several BERT models with different splitting dataset methods and evaluates their performance using accuracy, precision, recall, F1-score.",
+    tags: ["Python", "HuggingFace", "NLP", "BERT"],
     image: "/projects/emotion-classification.png",
-    github: "https://github.com/yourusername/emotion-classification",
+    github: "https://github.com/Euni-Stephany/emotion-classifier.git",
   },
 
   {
@@ -30,20 +30,19 @@ const projects: Project[] = [
     category: "Web Development",
     description:
       "A photography website designed to showcase photography services and collections through a clean and elegant interface.",
-    tags: ["React", "Tailwind CSS", "JavaScript"],
-    image: "/projects/lux-photography.png",
-    github: "https://github.com/yourusername/lux-photography",
-    demo: "https://example.com",
+    tags: ["HTML", "CSS", "JavaScript", "PHP"],
+    image: "/projects/luxphotografy.png",
+    github: "https://github.com/devjeje/luxphotografy.git",
+    demo: "https://luxphotografy.my.id",
   },
 
   {
-    title: "Veterinary Clinic",
-    category: "Desktop Application",
-    description:
-      "A CRUD-based veterinary clinic management system developed using C#. The application manages patient, owner, and veterinary clinic data with basic create, read, update, and delete functionality.",
-    tags: ["C#", "CRUD", "Database"],
-    image: "/projects/veterinary-clinic.png",
-    github: "https://github.com/yourusername/veterinary-clinic",
+    title: "Uptown Cafe & Space Wordpress",
+    category: "Web Development",
+    description: "A WordPress-based website for UpTown Cafe and Space featuring information on products, events, and the menu, as well as a reservation function.", 
+    tags: ["WordPress", "Elementor", "MySQL", "PHP"],
+    image: "/projects/uptownwordpress.png",
+    github: "https://github.com/Thomasaja/Website-Uptown-Cafe-and-Space.git",
   },
 
   {
@@ -51,9 +50,9 @@ const projects: Project[] = [
     category: "Web Development",
     description:
       "An e-commerce website concept designed to provide users with a simple shopping experience, including product browsing and product information.",
-    tags: ["Next.js", "React", "Tailwind CSS"],
+    tags: ["HTML", "CSS", "JavaScript", "PHP"],
     image: "/projects/kinaras.png",
-    github: "https://github.com/yourusername/kinaras",
+    github: "https://github.com/Euni-Stephany/Kinaras-Web.git",
   },
 ];
 
@@ -264,8 +263,8 @@ export default function ProjectCards() {
               overflow-y-auto
               rounded-3xl
               bg-[var(--background)]
-              p-6 shadow-2xl
-              md:p-8
+              p-6 pt-16 
+              shadow-2xl
             "
             onClick={(event) => event.stopPropagation()}
           >
@@ -274,7 +273,7 @@ export default function ProjectCards() {
               onClick={() => setSelectedProject(null)}
               aria-label="Close project details"
               className="
-                absolute right-5 top-5
+                absolute right-5 top-5 z-20
                 flex h-9 w-9
                 items-center justify-center
                 rounded-full
