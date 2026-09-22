@@ -6,6 +6,7 @@ export default function Navbar() {
   const [darkMode, setDarkMode] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  // useEffect for theme
   useEffect(() => {
     const savedTheme = localStorage.getItem("theme");
     if (savedTheme === "dark") {
@@ -13,6 +14,7 @@ export default function Navbar() {
       setDarkMode(true);
     }
   }, []);
+
 
   const toggleDarkMode = () => {
     const isDark = document.documentElement.classList.contains("dark");
@@ -29,7 +31,14 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="relative border-b border-[#f0dce4] bg-[var(--background)] transition-colors dark:border-[#4a303b]">
+    <nav
+      className={`
+        relative
+        border-b border-[#f0dce4]
+        bg-[var(--background)]
+        transition-all duration-300
+        dark:border-[#4a303b]`}
+    >
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
         {/* Logo */}
         <span className="text-xl font-bold text-[var(--pink)]">Unii</span>
@@ -51,7 +60,7 @@ export default function Navbar() {
           </a>
 
           <a
-            href="#experience"
+            href="#experiences"
             className="transition-colors hover:text-[var(--pink)]"
           >
             Experience
@@ -71,9 +80,7 @@ export default function Navbar() {
             aria-label="Toggle dark mode"
             className="rounded-full bg-[var(--pink-light)] px-3 py-2 cursor-pointer transition-transform duration-200 hover:scale-105"
           >
-            <>
-              {darkMode ? "☀️" : "🌙"}
-            </>
+            <>{darkMode ? "☀️" : "🌙"}</>
           </button>
         </div>
 
@@ -86,9 +93,7 @@ export default function Navbar() {
             aria-label="Toggle dark mode"
             className="rounded-full bg-[var(--pink-light)] px-3 py-2 cursor-pointer transition-transform duration-200 hover:scale-110"
           >
-            <>
-              {darkMode ? "☀️" : "🌙"}
-            </>
+            <>{darkMode ? "☀️" : "🌙"}</>
           </button>
 
           {/* Hamburger */}
@@ -132,7 +137,7 @@ export default function Navbar() {
           </a>
 
           <a
-            href="#experience"
+            href="#experiences"
             onClick={() => setIsMenuOpen(false)}
             className="py-2 transition-colors hover:text-(--pink)"
           >

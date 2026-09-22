@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
 
 export default function Hero() {
   return (
@@ -68,24 +68,6 @@ export default function Hero() {
             >
               <FaGithub size={18} />
               GitHub
-            </a>
-
-            <a
-              href="https://www.linkedin.com/in/eunique-lydia-stephany-2075822b6/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex w-full items-center justify-center gap-2 rounded-full bg-[var(--pink)] px-7 py-3.5 text-sm font-semibold text-white transition hover:-translate-y-1 hover:opacity-90 sm:w-auto"
-            >
-              <FaLinkedin size={18} />
-              LinkedIn
-            </a>
-
-            <a
-              href="mailto:eulydiastephany@gmail.com"
-              className="flex w-full items-center justify-center gap-2 rounded-full bg-[var(--pink)] px-7 py-3.5 text-sm font-semibold text-white transition hover:-translate-y-1 hover:opacity-90 sm:w-auto"
-            >
-              <FaEnvelope size={18} />
-              Email
             </a>
           </div>
         </div>

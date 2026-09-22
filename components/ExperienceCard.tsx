@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import { FaGithub, FaExternalLinkAlt, FaTimes } from "react-icons/fa";
+import {FaTimes} from "react-icons/fa";
 
 type Course = {
   name: string;
@@ -56,6 +56,12 @@ const experiences: Experience[] = [
       "A three-month internship program focused on learning machine learning concepts, culminating in a final project and a presentation of the project results.",
     certificate:
       "https://drive.google.com/file/d/1OlA3chUq27msrq2UDL5nRrY7gRm14VuZ/view?usp=sharing",
+  },
+  {
+    title: "Belajar Bareng 2023” as Guest Speaker for the Database Systems course",
+    description:
+      "HMIF work program: serving as mentors for the Database Systems course for junior students.",
+    certificate : "https://drive.google.com/file/d/1nJyfpvAg7ibzjC7qcI7R-dvhxFA-oQA9/view?usp=sharing",
   },
 ];
 
@@ -148,7 +154,7 @@ export default function ExperienceCards() {
                       onClick={() => setSelectedExperience(experience)}
                       className="
                         text-sm font-medium
-                        text-[var(--pink)]
+                      text-[var(--pink)]
                         underline-offset-4
                         transition
                         hover:underline
